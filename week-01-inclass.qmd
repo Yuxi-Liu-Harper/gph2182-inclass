@@ -1,7 +1,7 @@
 ---
 title: "Week 1 In-Class Exercise: Welcome & Modern Toolkit"
 subtitle: "GPH-GU 2182 · Statistical Programming in R"
-author: "YOUR NAME & PARTNER NAME"
+author: "Yuxi_Liu & Ziang_Li"
 date: "September 2, 2026"
 format:
   html:
@@ -34,8 +34,23 @@ In the code chunk below, compute the Body Mass Index (BMI) for three study parti
 $$\text{BMI} = \frac{\text{weight in kg}}{(\text{height in meters})^2}$$
 
 ```{r bmi-calculations}
-# Write your calculations below:
+height_A <- 1.75
+weight_A <- 70
 
+bmi_A <- weight_A / (height_A ^ 2)
+bmi_A
+
+height_B<- 1.80
+weight_B <- 85
+
+bmi_B <- weight_B / (height_B ^ 2)
+bmi_B
+
+height_C<- 1.62
+weight_C <- 58
+
+bmi_C <- weight_C / (height_C ^ 2)
+bmi_C
 ```
 
 ## Exploring Built-in Functions
@@ -43,8 +58,7 @@ $$\text{BMI} = \frac{\text{weight in kg}}{(\text{height in meters})^2}$$
 Compute the mean of the three BMIs you calculated above. Round the result to 2 decimal places using `round()`.
 
 ```{r bmi-summary}
-# Write your summary code below:
-
+round(mean(c(bmi_A, bmi_B, bmi_C)), digit = 2)
 ```
 
 ## R Packages and Documentation
@@ -54,8 +68,11 @@ Compute the mean of the three BMIs you calculated above. Round the result to 2 d
 3. Open the help file for the `median()` function using `?median`.
 
 ```{r r02pro-check}
-# Load library and inspect data:
-
+install.packages("tidyverse")
+library(tidyverse)
+head(ahp)
+median()
+?median
 ```
 
 ---
@@ -78,8 +95,8 @@ Create an R code chunk below with chunk option `#| echo: true` that creates a ve
 
 ```{r}
 #| echo: true
-# Write your code here:
-
+blood_pressure <- c(120, 134, 118, 142, 128)
+sd(blood_pressure)
 ```
 
 ---
